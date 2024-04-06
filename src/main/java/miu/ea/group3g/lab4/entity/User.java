@@ -22,6 +22,6 @@ public class User {
     @OneToMany(mappedBy = "user")
     @JsonManagedReference
     @Fetch(FetchMode.SELECT)
-    @BatchSize(size = 10)
+//    @BatchSize(size = 10)
     private List<Review> reviews;
 }

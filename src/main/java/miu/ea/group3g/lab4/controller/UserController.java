@@ -1,7 +1,6 @@
 package miu.ea.group3g.lab4.controller;
 
 import lombok.RequiredArgsConstructor;
-import miu.ea.group3g.lab4.aop.LogExecutionTime;
 import miu.ea.group3g.lab4.entity.User;
 import miu.ea.group3g.lab4.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +16,6 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
-    @LogExecutionTime
     @GetMapping
     public List<User> getAll() {
         System.out.println("Start: " + LocalDateTime.now());
